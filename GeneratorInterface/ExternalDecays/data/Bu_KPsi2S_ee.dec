@@ -1,0 +1,19 @@
+#
+# This is the decay file for the decay B+ -> Psi2S K + -> E+ E- K+
+#
+Alias      MyB+        B+
+Alias      MyB-        B-
+ChargeConj MyB-        MyB+
+Alias      MyPsi       psi(2S)
+ChargeConj MyPsi       MyPsi
+#
+Decay MyB+
+  1.000    MyPsi      K+              SVS;
+Enddecay
+CDecay MyB-
+#
+Decay MyPsi
+  1.000         e+       e-         PHOTOS VLL;
+Enddecay
+#
+End

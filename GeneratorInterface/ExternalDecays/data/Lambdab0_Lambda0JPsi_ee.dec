@@ -1,0 +1,21 @@
+#
+# This is the decay file for the decay Lambda_b0 -> J/Psi Lamba0 -> E+ E- Lambda0
+#
+# From https://github.com/cms-data/GeneratorInterface-EvtGenInterface/blob/master/DECAY_2014_NOLONGLIFE.DEC#L9183
+#
+Alias      MyLambda_b0        Lambda_b0
+Alias      Myanti-Lambda_b0   anti-Lambda_b0
+ChargeConj MyLambda_b0   Myanti-Lambda_b0 
+Alias      MyJpsi      J/psi
+ChargeConj MyJpsi      MyJpsi
+#
+Decay MyLambda_b0
+  1.000    Lambda0         MyJpsi                        PHSP;
+Enddecay
+CDecay Myanti-Lambda_b0
+#
+Decay MyJpsi
+  1.000         e+       e-         PHOTOS VLL;
+Enddecay
+#
+End
