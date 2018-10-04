@@ -38,7 +38,7 @@ bfilter = cms.EDFilter(
     ParticleID = cms.untracked.int32(511) ## Bd
     )
 
-decayfilterleg = cms.EDFilter(
+decayfilter = cms.EDFilter(
     "PythiaDauVFilter",
     verbose         = cms.untracked.int32(1),
     NumberDaughters = cms.untracked.int32(2),
